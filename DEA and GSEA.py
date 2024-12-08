@@ -247,7 +247,7 @@ print(adata_valid.obs.columns)
 # In[32]:
 
 
-# 手动注释子群功能类型
+
 adata_valid.obs['subcluster_type'] = adata_valid.obs['leiden'].map({
     '0': ' MAIT 0',  
     '1': ' MAIT 1',
@@ -255,7 +255,7 @@ adata_valid.obs['subcluster_type'] = adata_valid.obs['leiden'].map({
     
 })
 
-# 检查添加是否成功
+
 print(adata_valid.obs[['leiden', 'subcluster_type']].head())
 
 
@@ -273,18 +273,6 @@ time_distribution.plot(kind='bar', stacked=True, title="MAIT Subclusters Distrib
 
 sc.pl.umap(adata_valid, color=['time', 'subcluster_type'],
            title="MAIT Subclusters Distribution Across T0, T1, T2")
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
 
 
 # In[89]:
@@ -936,7 +924,7 @@ gsea_results_NR_T1.plot(
 plt.show()
 
 
-# In[ ]:
+
 
 
 
